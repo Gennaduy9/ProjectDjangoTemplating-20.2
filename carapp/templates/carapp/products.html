@@ -1,0 +1,30 @@
+{% extends 'carapp/base.html' %}
+{% load my_tegs %}
+{% block content %}
+
+
+    <div class="container marketing">
+
+        {% for object in object_list %}
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">{{ object.name }}</h2>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ object.photo|mediapath }}"
+                         {# src="/media/{{ object.photo }}" #}
+                         class="img-thumbnail"
+                         alt="Card image cap">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'carapp/base.html' %}
+
+{% block content %}
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+
+        <!-- START THE FEATURETTES -->
+        {% for object in object_list %}
+            {% include 'carapp/includes/inc_category.html' %}
+        {% endfor %}
+
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+{% endblock %}

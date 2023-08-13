@@ -1,0 +1,20 @@
+{% extends 'carapp/base.html' %}
+{% block content %}
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h2 class="display-4 fw-normal text-body-emphasis">Обратная связь</h2>
+        <div class="row row-cols-5 bg-center-l row-cols-md-3 mb-5 text-center">
+            <div class="col card">
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <input name="name" class="form-control mb-2" placeholder="Name" type="text">
+                        <input name="email" class="form-control mb-2" placeholder="Email" type="email">
+                        <textarea name="message" class="form-control mb-2" placeholder="Your message"></textarea>
+                        <input class="btn btn-primary w-100" type="submit" value="Отправить"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
