@@ -1,0 +1,30 @@
+{% load custom_tags %}
+
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="/">Главная</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="row featurette">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h2 class="display-4 fw-normal text-body-emphasis mb-3">{{ object.name }}</h2>
+        <p><img src="{% mediapath object.photo %}" alt="Card image cap"/></p>
+        {{ object.description|truncatechars:100 }}
+        <p>Цена: {{ object.price }} руб.</p>
+    </div>
+    <p><a class="btn btn-lg btn-primary m-3" href="#">Купить</a></p>
+</div>
+
+

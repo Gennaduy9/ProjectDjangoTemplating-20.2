@@ -12,11 +12,10 @@
             <div class="row featurette">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">{{ object.name }}</h2>
+                    <p><a class="btn btn-lg btn-primary m-3" href="{% url 'carapp:products_detail' object.pk %}">Подробнее</a></p>
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ object.photo|mediapath }}"
-                         {# src="/media/{{ object.photo }}" #}
-                         class="img-thumbnail"
+                    <img src="{{ object.photo|mediapath }}" class="img-thumbnail"
                          alt="Card image cap">
                 </div>
             </div>
